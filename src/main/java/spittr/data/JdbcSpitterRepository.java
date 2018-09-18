@@ -24,11 +24,8 @@ public class JdbcSpitterRepository implements SpitterRepository {
     jdbc.update(
         "insert into Spitter (username, password, first_name, last_name, email)" +
         " values (?, ?, ?, ?, ?)",
-        spitter.getUsername(),
-        spitter.getPassword(),
-        spitter.getFirstName(),
-        spitter.getLastName(),
-        spitter.getEmail());
+        "l3441g","1213445","la12i4ng","pengchen","276152463@qq.com"
+        );
     return spitter; // TODO: Determine value for id
   }
 
@@ -36,7 +33,7 @@ public class JdbcSpitterRepository implements SpitterRepository {
     return jdbc.queryForObject(
         "select id, username, null, first_name, last_name, email from Spitter where username=?", 
         new SpitterRowMapper(), 
-        username);
+        "l341g");
   }
   
   private static class SpitterRowMapper implements RowMapper<Spitter> {
