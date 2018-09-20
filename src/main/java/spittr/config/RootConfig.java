@@ -13,7 +13,7 @@ import spittr.config.RootConfig.WebPackage;
 
 @Configuration
 @Import(DataConfig.class)
-@ComponentScan(basePackages={"spittr.config,spittr.data,event.service,event.listener"}, 
+@ComponentScan(basePackages={"spittr.config,spittr.data,event.service,event.listener,event.mapper"}, 
     excludeFilters={
         @Filter(type=FilterType.CUSTOM, value=WebPackage.class)
     })
