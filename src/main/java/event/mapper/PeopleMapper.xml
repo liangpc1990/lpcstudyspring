@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="event.mapper.PeopleMapper">
+  <resultMap id="BaseResultMap" type="event.bean.People">
+    <id column="ID" jdbcType="DECIMAL" property="id" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="AGE" jdbcType="VARCHAR" property="age" />
+    <result column="CITY" jdbcType="VARCHAR" property="city" />
+  </resultMap>
+   <insert id="insert" parameterType="event.bean.People">
+    insert into PEOPLE (ID, NAME, AGE, 
+      CITY)
+    values (#{id,jdbcType=DECIMAL}, #{name,jdbcType=VARCHAR}, #{age,jdbcType=VARCHAR}, 
+      #{city,jdbcType=VARCHAR})
+  </insert>
+</mapper>
